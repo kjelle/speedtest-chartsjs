@@ -1,8 +1,9 @@
 Sourcecode for https://speedtest.secwiz.io
 
-The data is a data.json file which is the output of;
+The data is a data.json file keeps a frequent output of speedtest-cli in JSON format. All results are formated using jq
 ```
-speedtest-cli --json | jq -cr --slurp .
+speedtest-cli --json >> output.json
+cat output.json | jq -cr --slurp . > data.json
 ```
 
 
