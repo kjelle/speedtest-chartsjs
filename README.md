@@ -1,19 +1,34 @@
 Sourcecode for https://speedtest.secwiz.io
 
-# Build your server list
-Select which servers to run with speedtest-cli. The run script will handle the output from `--list`:
+# Setup your config
+Select which servers to run with speedtest-cli. You can view which IDs are available using `--list`
 ```
-./speedtest-cli --list | grep -i norw | egrep "(ITsjefen|Telenor Norge AS|Altibox AS \(Oslo|Get AS|Broadnet)" > server_list
-```
-
-# Update your own domain
-
-
-The data is a data.json file keeps a frequent output of speedtest-cli in JSON format. All results are formated using jq
-```
-speedtest-cli --json >> output.json
-cat output.json | jq -cr --slurp . > data.json
+./speedtest-cli --list | grep -i norw | egrep "(ITsjefen|Telenor Norge AS|Altibox AS \(Oslo|Get AS|Broadnet)" 
 ```
 
+Update the `config.json` accordingly
+```
+{
+  "binary":"/usr/local/bin/speedtest-cli",
+  "output":"data.json",
+  "servers": [
+    "1252",
+    "11787",
+    "13544",
+    "12919",
+    "11786",
+    "25057"
+  ]
+}
+```
 
-Hosted in docker using an nginx behind a traefik and ACME for certificates.
+# Run your tests
+
+Run the tests to update `data.json`
+```
+bash test.sh
+```
+
+# Hosting
+
+Hosted this folder statically on your webserver. E.g. in docker using an nginx behind a traefik and ACME for certificates.
