@@ -1,0 +1,12 @@
+{
+  "binary":"/usr/local/bin/speedtest-cli",
+  "output":"data.json", 
+  "servers": [
+    "1252",
+    "11787",
+    "13544",
+    "12919",
+    "11786",
+    "25057"
+  ]
+}

@@ -17,12 +17,27 @@
 
     <script src="utils.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+    </style>
 </head>
 
 
 <body>
 
 <div id="details"></div>
+
+
+<button id="btnAll" class="button1">All</button>
+<button id="btnToggle" class="button1">Toggle</button>
+<button id="btnOnlyDownload" class="button1">Only download</button>
+<button id="btnOnlyUpload" class="button1">Only upload</button>
+<button id="btnOnlyPing" class="button1">Only ping</button>
 
 <canvas id="myChart" ></canvas>
 

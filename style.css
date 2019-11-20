@@ -27,3 +27,19 @@ a {
   color: #3e95cd;
 }
 
+.button1{
+  border:1px solid #1a2b34;
+  border-radius:3px;
+  background:#f8bc45;
+  color:#1a2b34;display:inline-block;font-size:9px;font-weight:400;line-height:1.2em;padding:3px;text-decoration:none!important;text-transform:uppercase;transition:background .3s,color .3s}
+
+.button1:hover{
+ background:#1a2b34;
+ color:#fff
+}
+@media all and (max-width:30em){
+ .button1{
+  display:block;
+  margin:0.4em auto;
+ }
+}
